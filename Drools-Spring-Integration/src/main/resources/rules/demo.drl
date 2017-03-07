@@ -1,0 +1,15 @@
+package rules
+import com.java.spring.drools.Product;
+rule "Gold discount rule"
+	when
+		product: Product(productType == "gold");
+	then
+	product.setDiscount(2);
+		
+end
+rule "Diamond discount rule"
+	when
+		product: Product(productType == "diamond");
+	then
+	product.setDiscount(1);	
+end
